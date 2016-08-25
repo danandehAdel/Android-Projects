@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.shobhit.findrestaurant.MainActivity"
+    android:background="@drawable/background"
+    >
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Weather Conditions"
+        android:id="@+id/button"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="getWeather"
+        android:background="#52eed1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Weather :"
+        android:id="@+id/weather"
+        android:textSize="13sp"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/relativeHumidity"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/weatherView"
+        android:text="Placeholder"
+        android:visibility="invisible"
+        android:textSize="13sp"
+        android:layout_alignBottom="@+id/weather"
+        android:layout_alignRight="@+id/relativeView"
+        android:layout_alignEnd="@+id/relativeView"
+        android:layout_alignTop="@+id/weather"
+        android:layout_toRightOf="@+id/relativeHumidity"
+        android:layout_toEndOf="@+id/relativeHumidity" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="City name : "
+        android:id="@+id/city"
+        android:layout_marginTop="48dp"
+        android:textSize="13sp"
+        android:layout_below="@+id/button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Elevation :"
+        android:id="@+id/Elevatoin"
+        android:layout_marginTop="30dp"
+        android:textSize="13sp"
+        android:layout_below="@+id/city"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/cityView"
+        android:text="Placeholder"
+        android:visibility="invisible"
+        android:textSize="13sp"
+        android:layout_alignBottom="@+id/city"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/city"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/elevationView"
+        android:text="Placeholder"
+        android:visibility="invisible"
+        android:textSize="13sp"
+        android:layout_alignBottom="@+id/Elevatoin"
+        android:layout_alignRight="@+id/cityView"
+        android:layout_alignEnd="@+id/cityView"
+        android:layout_alignTop="@+id/Elevatoin"
+        android:layout_toRightOf="@+id/relativeHumidity"
+        android:layout_toEndOf="@+id/relativeHumidity" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Temperature :"
+        android:id="@+id/textView"
+        android:layout_marginTop="30dp"
+        android:textSize="13sp"
+        android:layout_below="@+id/Elevatoin"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/tempView"
+        android:text="Placeholder"
+        android:visibility="invisible"
+        android:textSize="13sp"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignRight="@+id/elevationView"
+        android:layout_alignEnd="@+id/elevationView"
+        android:layout_alignTop="@+id/textView"
+        android:layout_toRightOf="@+id/relativeHumidity"
+        android:layout_toEndOf="@+id/relativeHumidity" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Relative humidity : "
+        android:id="@+id/relativeHumidity"
+        android:textSize="13sp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/relativeView"
+        android:text="Placeholder"
+        android:visibility="invisible"
+        android:textSize="13sp"
+        android:layout_alignBottom="@+id/relativeHumidity"
+        android:layout_alignRight="@+id/tempView"
+        android:layout_alignEnd="@+id/tempView"
+        android:layout_alignTop="@+id/relativeHumidity"
+        android:layout_toRightOf="@+id/relativeHumidity"
+        android:layout_toEndOf="@+id/relativeHumidity" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Wind speed :"
+        android:textSize="13sp"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/weather"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/windSpeed" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/windView"
+        android:text="Placeholder"
+        android:visibility="invisible"
+        android:textSize="13sp"
+        android:layout_alignBottom="@+id/windSpeed"
+        android:layout_alignLeft="@+id/weatherView"
+        android:layout_alignStart="@+id/weatherView"
+        android:layout_alignTop="@+id/windSpeed"
+        android:layout_alignRight="@+id/weatherView"
+        android:layout_alignEnd="@+id/weatherView" />
+
+</RelativeLayout>
