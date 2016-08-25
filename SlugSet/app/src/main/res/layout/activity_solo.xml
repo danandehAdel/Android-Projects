@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backGroundColor"
+    tools:context=".SoloMode">
+
+    <!--GAME STATISTICS-->
+    <LinearLayout
+        android:id="@+id/gameStatistics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:id="@+id/leftContainer">
+
+            <TextView
+                android:id="@+id/setsAvailable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Sets Available"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:textColor="#828282" />
+
+            <TextView
+                android:id="@+id/numOfSets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="30sp"
+                android:text="0"
+                android:gravity="center"
+                android:layout_marginTop="-5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:id="@+id/rightContainer">
+
+            <TextView
+                android:id="@+id/cardsOnDeck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Cards on Deck"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:textColor="#828282" />
+
+            <TextView
+                android:id="@+id/numOfCardsOnDeck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#000"
+                android:textSize="30sp"
+                android:layout_marginTop="-5dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!--GAME BOARD-->
+    <LinearLayout
+        android:id="@+id/board"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp">
+
+        <!--ROW 1-->
+        <LinearLayout
+            android:id="@+id/row1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp">
+
+            <!--ROW 1 CARD 1-->
+            <FrameLayout
+                android:layout_width="@dimen/cardWidth"
+                android:layout_height="@dimen/cardHeight"
+                android:paddingRight="3dp"
+                android:paddingLeft="3dp">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/R0C0"
+                    android:onClick="cardSelected"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/button_border_gray"
+                    android:padding="3dp"
+                    android:src="@drawable/card_empty" />
+
+            </FrameLayout>
+
+            <!--ROW 1 CARD 2-->
+            <FrameLayout
+                android:layout_width="@dimen/cardWidth"
+                android:layout_height="@dimen/cardHeight"
+                android:paddingRight="3dp"
+                android:paddingLeft="3dp">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/R0C1"
+                    android:onClick="cardSelected"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/button_border_gray"
+                    android:padding="3dp"
+                    android:src="@drawable/card_empty" />
+
+            </FrameLayout>
+
+            <!--ROW 1 CARD 3-->
+            <FrameLayout
+                android:layout_width="@dimen/cardWidth"
+                android:layout_height="@dimen/cardHeight"
+                android:paddingRight="3dp"
+                android:paddingLeft="3dp">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/R0C2"
+                    android:onClick="cardSelected"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/button_border_gray"
+                    android:padding="3dp"
+                    android:src="@drawable/card_empty" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!--ROW2-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/row2"
+            android:layout_marginBottom="5dp">
+
+            <!--ROW 2 CARD 1-->
+            <FrameLayout
+                android:layout_width="@dimen/cardWidth"
+                android:layout_height="@dimen/cardHeight"
+                android:paddingRight="3dp"
+                android:paddingLeft="3dp">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/R1C0"
+                    android:onClick="cardSelected"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/button_border_gray"
+                    android:padding="3dp"
+                    android:src="@drawable/card_empty" />
+
+            </FrameLayout>
+
+            <!--ROW 2 CARD 2-->
+            <FrameLayout
+                android:layout_width="@dimen/cardWidth"
+                android:layout_height="@dimen/cardHeight"
+                android:paddingRight="3dp"
+                android:paddingLeft="3dp">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/R1C1"
+                    android:onClick="cardSelected"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/button_border_gray"
+                    android:padding="3dp"
+                    android:src="@drawable/card_empty" />
+
+            </FrameLayout>
+
+            <!--ROW 2 CARD 3-->
+            <FrameLayout
+                android:layout_width="@dimen/cardWidth"
+                android:layout_height="@dimen/cardHeight"
+                android:paddingRight="3dp"
+                android:paddingLeft="3dp">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/R1C2"
+                    android:onClick="cardSelected"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/button_border_gray"
+                    android:padding="3dp"
+                    android:src="@drawable/card_empty" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!--ROW 3-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/row3"
+            android:layout_marginBottom="5dp">
+
+            <!--ROW 3 CARD 1-->
+            <FrameLayout
+                android:layout_width="@dimen/cardWidth"
+                android:layout_height="@dimen/cardHeight"
+                android:paddingRight="3dp"
+                android:paddingLeft="3dp">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/R2C0"
+                    android:onClick="cardSelected"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/button_border_gray"
+                    android:padding="3dp"
+                    android:src="@drawable/card_empty" />
+
+            </FrameLayout>
+
+            <!--ROW 3 CARD 2-->
+            <FrameLayout
+                android:layout_width="@dimen/cardWidth"
+                android:layout_height="@dimen/cardHeight"
+                android:paddingRight="3dp"
+                android:paddingLeft="3dp">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/R2C1"
+                    android:onClick="cardSelected"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/button_border_gray"
+                    android:padding="3dp"
+                    android:src="@drawable/card_empty" />
+
+            </FrameLayout>
+
+            <!--ROW 3 CARD 3-->
+            <FrameLayout
+                android:layout_width="@dimen/cardWidth"
+                android:layout_height="@dimen/cardHeight"
+                android:paddingRight="3dp"
+                android:paddingLeft="3dp">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/R2C2"
+                    android:onClick="cardSelected"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/button_border_gray"
+                    android:padding="3dp"
+                    android:src="@drawable/card_empty" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!--ROW 4-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/row4">
+
+            <!--ROW 4 CARD 1-->
+            <FrameLayout
+                android:layout_width="@dimen/cardWidth"
+                android:layout_height="@dimen/cardHeight"
+                android:paddingRight="3dp"
+                android:paddingLeft="3dp">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/R3C0"
+                    android:onClick="cardSelected"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/button_border_gray"
+                    android:padding="3dp"
+                    android:src="@drawable/card_empty" />
+
+            </FrameLayout>
+
+            <!--ROW 4 CARD 2-->
+            <FrameLayout
+                android:layout_width="@dimen/cardWidth"
+                android:layout_height="@dimen/cardHeight"
+                android:paddingRight="3dp"
+                android:paddingLeft="3dp">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/R3C1"
+                    android:onClick="cardSelected"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/button_border_gray"
+                    android:padding="3dp"
+                    android:src="@drawable/card_empty" />
+
+            </FrameLayout>
+
+            <!--ROW 4 CARD 3-->
+            <FrameLayout
+                android:layout_width="@dimen/cardWidth"
+                android:layout_height="@dimen/cardHeight"
+                android:paddingRight="3dp"
+                android:paddingLeft="3dp">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/R3C2"
+                    android:onClick="cardSelected"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/button_border_gray"
+                    android:padding="3dp"
+                    android:src="@drawable/card_empty" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!--HINT, SHUFFLE AND NEW GAME BUTTONS-->
+    <RelativeLayout
+        android:id="@+id/hintAndShuffleContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/board"
+        android:layout_alignStart="@+id/board"
+        android:layout_alignRight="@+id/board"
+        android:layout_alignEnd="@+id/board"
+        android:layout_below="@+id/board"
+        android:layout_marginTop="30dp">
+
+        <Button
+            android:layout_width="@dimen/helperBtnWidth"
+            android:layout_height="@dimen/helperBtnHeight"
+            android:text="hint"
+            android:id="@+id/hint"
+            android:onClick="hintPressed"
+            android:layout_gravity="left"
+            android:background="#7fcfb9"
+            android:textColor="#FFFFFF"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="30dp" />
+        <Button
+            android:layout_width="@dimen/helperBtnWidth"
+            android:layout_height="@dimen/helperBtnHeight"
+            android:text="shuffle"
+            android:id="@+id/shuffle"
+            android:onClick="shufflePressed"
+            android:background="#71BACE"
+            android:textColor="#FFFFFF"
+            android:gravity="center_vertical|center|center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:layout_width="@dimen/helperBtnWidth"
+            android:layout_height="@dimen/helperBtnHeight"
+            android:text="new game"
+            android:id="@+id/newGame"
+            android:onClick="newGamePressed"
+            android:background="#FF7953"
+            android:textColor="#FFFFFF"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="30dp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/music"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_weight="1"
+        android:onClick="volumeControl"
+        android:background="@drawable/volume"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:clickable="false"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="cardWidth">117dp</dimen>
+    <dimen name="cardHeight">83dp</dimen>
+    <dimen name="helperBtnWidth">90dp</dimen>
+    <dimen name="helperBtnHeight">60dp</dimen>
+</resources>

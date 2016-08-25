@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:src="@drawable/slug_set_title"
+        android:layout_alignParentTop="true"
+        android:padding="20dp" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:text="solo"
+        android:id="@+id/solo"
+        android:background="#7fcfb9"
+        android:textColor="#FFFFFF"
+        android:onClick="soloButtonPressed"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="72dp" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:text="multi player"
+        android:id="@+id/multiplayer"
+        android:layout_marginTop="10dp"
+        android:background="#71BACE"
+        android:textColor="#FFFFFF"
+        android:onClick="multiplayerButtonPressed"
+        android:layout_below="@+id/solo"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/music"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_weight="1"
+        android:onClick="volumeControl"
+        android:background="@drawable/volume"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:clickable="false"/>
+
+</RelativeLayout>
